@@ -1,0 +1,64 @@
+git init               //initialize git repository for the project
+ls -a                  //to see hidden files in the project folder
+touch names.txt        //touch command to create a new file
+git status             //status of all actions in the project and act upon
+git add .              //to add all the files that are not yet commited
+git add names.txt      //to add only particular file to the repo
+git commit -m "names.txt file added"   //after git add ,we need to perform a commit with a message for that particular git add.
+cat names.txt          //cat command to view contents of the file in the terminal itself
+
+#After modifying a file and performing git add, but u dont want to commit changes then,
+git restore --staged names.txt
+
+git log     //for commit history
+rm -rf names.txt  //to remove a file from the project. Even after removing a file, u must git add. and commit changes.
+
+git reset f49dsebfjhe3fnm..commit_hash from git log    //this command is used when we need to go to that particular commit state of the project. 
+ 
+git stash          //all the items that are not commited, will be sent to back stage and We ll have the state of previous last commit and work on it.
+git stash pop      //this commands bring backs all items from back stage and can be committed
+git stash clear    //to delete all the items in the backstage
+
+##Github
+git remote add origin https://github.com/madhukeshavan/project1.git //after creating a repo in guthub, copy url and remote add origin url.
+git remote -v  //displays all the attached url of repos
+git push origin master //to see the changes in github of our local project.
+git remote add upstream https://github.com/madhu/project2  //upstream keyword when adding a forked project
+
+##Github Branch, Push, Pull Request.
+git branch dev
+git checkout dev
+
+git checkout -b madhu/feature_name
+git add.
+git commit -m "message"
+
+git checkout dev
+git merge madhu/feature_name  //merging one branch code into another branch
+
+
+
+git push origin madhu
+git push origin madhu -f
+
+git checkout main
+git fetch -all --prune     //to fetch others latest commit in my forked project
+git reset --hard upstream/main
+git log
+git push origin main    //main barnch of the forked project.
+
+git pull upstream main  //to pull all latest commit of the forked project.
+git rebase -i 4fdsbfks..commit..hash  //this helps to merge multiple commits in one commits.
+
+git pull --rebase origin master
+git push origin master
+
+$  git config --global user.email madhukeshavan2903@gmail.com
+$ git config --global user.name "Madhusudhan K"
+$ git config --global --edit
+
+git checkout commit_hash_code   //to go to a particular commmit state
+git checkout master    //reverse goes to the master branch with all the commits done
+
+
+
