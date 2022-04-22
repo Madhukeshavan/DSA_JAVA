@@ -3,12 +3,14 @@ package com.madhusudhan;
 import java.util.Arrays;
 
 public class TheArrays {
-    public static void main(String args[]){
-        String[] colors = new String[] {"red", "blue", "green"};
+    public static void main(String args[]) {
+        String[] colors = new String[]{"red", "blue", "green"};
         System.out.println(Arrays.toString(colors));
 
-        for(String a: colors){
+        for (String a : colors) {
             System.out.println(a);
         }
+        Arrays.stream(colors).forEach(System.out::println);
+
     }
 }
